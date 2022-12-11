@@ -2,17 +2,28 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
-    <p>Your contact page.</p>
+    <p>Contacto de programadores</p>
 
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
+        Herberth Maradiaga</address>
+    <address>
+        tel. (503)76338189</address>
+    <address>
+        what. (503)76338189<br />
     </address>
+    <address>
+        correo: <a href="mailto:isnp124621@ugb.edu.sv">isnp124621@ugb.edu.sv</a> o <a href="mailto:juradomaradiaga34@gmail.com">juradomaradiaga34@gmail.com</a></address>
+    <address>
+        Lissette Vargas</address>
+    <address>
+        tel. (503)72065500</address>
+    <address>
+        what. (503)72065500</address>
+    <address>
+        correo: isnp061901@ugb.edu.sv</address>
 
     <address>
-        <strong>Support:</strong><a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong><a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong>Support:</strong><a href="mailto:Support@example.com"><span class="text-primary">juradomaradiaga34@gmail.com</span></a><br />
+        <strong>Marketing:</strong>isnp061901@ugb.edu.sv
     </address>
 </asp:Content>
