@@ -46,6 +46,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -131,6 +132,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="agregaralumno.aspx" />
+    <Content Include="agregardocente.aspx" />
+    <Content Include="agregardomateria.aspx" />
+    <Content Include="agregarusuario.aspx" />
     <Content Include="alumno.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -139,6 +144,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="docente.aspx" />
+    <Content Include="editaralumno.aspx" />
+    <Content Include="editardocente.aspx" />
+    <Content Include="editarmateria.aspx" />
+    <Content Include="editarusuario.aspx" />
+    <Content Include="eliminaralumno.aspx" />
+    <Content Include="eliminardocente.aspx" />
+    <Content Include="eliminarmateria.aspx" />
+    <Content Include="eliminarusuario.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -151,6 +165,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="materia.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -179,10 +194,39 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="usuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agregaralumno.aspx.designer.vb">
+      <DependentUpon>agregaralumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agregaralumno.aspx.vb">
+      <DependentUpon>agregaralumno.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="agregardocente.aspx.designer.vb">
+      <DependentUpon>agregardocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agregardocente.aspx.vb">
+      <DependentUpon>agregardocente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="agregardomateria.aspx.designer.vb">
+      <DependentUpon>agregardomateria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agregardomateria.aspx.vb">
+      <DependentUpon>agregardomateria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="agregarusuario.aspx.designer.vb">
+      <DependentUpon>agregarusuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="agregarusuario.aspx.vb">
+      <DependentUpon>agregarusuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="alumno.aspx.designer.vb">
       <DependentUpon>alumno.aspx</DependentUpon>
     </Compile>
@@ -214,8 +258,84 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="docente.aspx.designer.vb">
+      <DependentUpon>docente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docente.aspx.vb">
+      <DependentUpon>docente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="docente.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editaralumno.aspx.designer.vb">
+      <DependentUpon>editaralumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editaralumno.aspx.vb">
+      <DependentUpon>editaralumno.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="editardocente.aspx.designer.vb">
+      <DependentUpon>editardocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editardocente.aspx.vb">
+      <DependentUpon>editardocente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="editarmateria.aspx.designer.vb">
+      <DependentUpon>editarmateria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarmateria.aspx.vb">
+      <DependentUpon>editarmateria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="editarusuario.aspx.designer.vb">
+      <DependentUpon>editarusuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarusuario.aspx.vb">
+      <DependentUpon>editarusuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="eliminaralumno.aspx.designer.vb">
+      <DependentUpon>eliminaralumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eliminaralumno.aspx.vb">
+      <DependentUpon>eliminaralumno.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="eliminardocente.aspx.designer.vb">
+      <DependentUpon>eliminardocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eliminardocente.aspx.vb">
+      <DependentUpon>eliminardocente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="eliminarmateria.aspx.designer.vb">
+      <DependentUpon>eliminarmateria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarmateria.aspx.vb">
+      <DependentUpon>eliminarmateria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="eliminarusuario.aspx.designer.vb">
+      <DependentUpon>eliminarusuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarusuario.aspx.vb">
+      <DependentUpon>eliminarusuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="materia.aspx.designer.vb">
+      <DependentUpon>materia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="materia.aspx.vb">
+      <DependentUpon>materia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="materia.vb">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -241,6 +361,16 @@
     </Compile>
     <Compile Include="Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuario.aspx.designer.vb">
+      <DependentUpon>usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.aspx.vb">
+      <DependentUpon>usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="usuario.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
