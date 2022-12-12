@@ -46,11 +46,10 @@ Public Class alumno
         c.strcon.Open()
         With c.cmd
             .Connection = c.strcon
-            .CommandText = "SELECT codAlumno, nomAlumno, apeAlumno FROM alumno"
+            .CommandText = "SELECT codigoAlumno, nombreAlumno, apellidoAlumno FROM alumno"
         End With
         c.da.SelectCommand = c.cmd
         c.da.Fill(c.dt)
-
         Return c.dt
     End Function
 
