@@ -10,4 +10,5 @@
     &nbsp;</p>
 <p class="text-center" style="font-size: x-large">
     &nbsp;</p>
+    <asp:PlaceHolder id="usuario" runat="server" />
 </asp:Content>
