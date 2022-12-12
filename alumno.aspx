@@ -3,8 +3,5 @@
     <p class="text-center">
     <br />
     <strong><span style="font-size: x-large">LISTA DE ESTUDIANTES</span></strong></p>
-<p>
-</p>
-<p>
-</p>
+    <asp:PlaceHolder ID="Estudiantes" runat="server" />
 </asp:Content>
